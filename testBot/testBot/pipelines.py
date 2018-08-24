@@ -34,12 +34,7 @@ class TestbotPipeline(object):
             item["status"] = FAILURE_STATUS_TRUE
         else:
             item["status"] = FAILURE_STATUS_FALSE
-        data_json = json.dumps(item)
-        headers = {'Content-Type': 'application/json'}
-        try:
-            requests.post(url=self.url, data=data_json, headers=headers)
-        except Exception as e:
-            print(str(e))
+        print(item)
 
     def process_item(self, item, spider):
         self.items.append(item["data"])
