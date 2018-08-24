@@ -1,0 +1,65 @@
+"HtmlTags": {
+      "hotelRoomSizeSelector": {
+        "ByXpath": ".//*[@class='js-room-size-unit-value']",
+        "ById": "",
+        "ByClass": ".js-room-size-unit-value",
+        "isValue": true,
+        "isOptional": true
+      },
+      "hotelRoomFacilitiesSelector": {
+        "ByXpath": ".//*[@class='hprt-facilities-block']",
+        "ById": "",
+        "ByCssXpath": "hprt-facilities-block",
+        "ByClass": ".hprt-facilities-block",
+        "isValue": false,
+        "isOptional": false
+      },
+      "hotelFacilitiesInner": {
+        "ByXpath": ".//*[contains(@class,'hprt-facilities-facility')]/span",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".hprt-facilities-facility",
+        "isValue": true,
+        "isOptional": true
+      },
+      "hotelOtherFacilitiesSelector": {
+        "ByXpath": "./*[@class='hprt-facilities-others']",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".hprt-facilities-others",
+        "isValue": false,
+        "isOptional": true
+      },
+      "hotelOtherFacilitiesInner": {
+        "ByXpath": ".//*[contains(@class,'hprt-facilities-facility')]",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".hprt-facilities-facility",
+        "isOptional": true,
+        "isValue": true
+      },
+      "hotelTaxinfoDivSelector": {
+        "ByXpath": ".//*[contains(@class,'hptr-taxinfo-block')]",
+        "ById": "",
+        "ByClass": ".hptr-taxinfo-block",
+        "ByCssXpath": "",
+        "isValue": false,
+        "isOptional": false
+      },
+      "hotelRoomTaxDetailsSelector": {
+        "isOptional": false,
+        "ByCssXpath": "hptr-taxinfo-details",
+        "ById": "",
+        "ByClass": "",
+        "ByXpath": ".//*[@class='hptr-taxinfo-details']",
+        "isValue": false
+      },
+      "hotelTaxDetailsInner": {
+        "ByXpath": ".//text()",
+        "ById": "",
+        "ByClass": "",
+        "ByCssXpath": "",
+        "isValue": false,
+        "isOptional": false
+      }
+}

@@ -1,0 +1,465 @@
+{
+  "ApiEndpoints": {
+    "ClosureServiceUrl": "http://35.236.255.203/api/crawlstat/"
+  },
+  "Proxies":[
+    {
+      "IPAddress": "104.129.37.20:60000",
+      "UserId": "rgproxy",
+      "Password": "qQzL84cgZY",
+      "ProxyCategory": "testing123",
+      "CountryId": 12345
+    }
+  ],
+  "BotInfo": {
+    "BotID": 759,
+    "WebsiteID": 769,
+    "productId": 3,
+    "WebsiteName": "BOOKINGDOTCOM",
+    "UserAgent": "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0",
+    "ContentType": "application/x-www-form-urlencoded",
+    "BufferResponse": false,
+    "UseCredential": false,
+    "UseProxy": false,
+    "TimeOutInSec": 900,
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "EncodingType": "gzip, deflate",
+    "DeleteProxy": false,
+    "BaseUrl": "https://www.booking.com",
+    "SaveXml": false,
+    "SiteDefaultCurrency": null,
+    "MinSleepTimeInMS": 0,
+    "MaxSleepTimeInMS": 0,
+    "AcceptLanguage": "en-US,en;q=0.5",
+    "UseSippCode": false,
+    "ProxyCategory": null,
+    "ClosedRegexMsg": null,
+    "ProxyCountryID": null,
+    "UseUniqueSubnet": false,
+    "IgnoreCostGroupID": false,
+    "IsActive": true,
+    "ExclUdeProxyCategory": null,
+    "ProxyWebsiteID": 0,
+    "UseDynamicUserAgent": false,
+    "UserAgentType": null,
+    "DesignCachePage": false,
+    "StoreCachePage": null,
+    "WriteLog": null,
+    "AzureBotRepositoryPath": "https://adevtestrsood7682.blob.core.windows.net/botrepository/booking.zip",
+    "BotName": "booking",
+    "BotVersion": "1.0.0.0",
+    "BotTypeId": 1,
+    "BotType": "Puppeteer",
+    "BotDescription": null,
+    "RequestType": null,
+    "ExecutingBinary": "booking.js",
+    "DebugMode": false,
+    "tempHtmlTags": null,
+    "HtmlTags": {
+      "hotelStarsDivSelector": {
+        "ByXpath": ".//*[@class='hp__hotel-title']",
+        "ById": "",
+        "ByClass": ".hp__hotel-title",
+        "ByCssXpath": "hp__hotel-title",
+        "isValue": false,
+        "isOptional": true
+      },
+      "hotelDepthPriceSelector": {
+        "ByXpath": ".//*[@data-animate-price-group-name='bp_user_total_price']",
+        "ById": "",
+        "ByClass": "",
+        "ByCssXpath": "",
+        "isValue": true,
+        "isOptional": false
+      },
+      "hotelDepthChargeDivSelector": {
+        "ByXpath": ".//*[@class='bp_pricedetails_breakdown_included']",
+        "ById": "",
+        "ByClass": ".bp_pricedetails_breakdown_included",
+        "ByCssXpath": "bp_pricedetails_breakdown_included",
+        "isValue": false,
+        "isOptional": true
+      },
+      "hotelDepthChargeDetailsSelector": {
+          "ByXpath": ".//*[@class='bp_pricedetails_breakdown_charge']",
+          "ById": "",
+          "ByClass": ".bp_pricedetails_breakdown_charge",
+          "ByCssXpath": "bp_pricedetails_breakdown_charge",
+          "isValue": true,
+          "isOptional": true
+      },
+      "hotelDepthChargePriceSelector": {
+        "ByXpath": ".//*[@class='bp_pricedetails_breakdown_price']",
+        "ById": "",
+        "ByClass": ".bp_pricedetails_breakdown_price",
+        "ByCssXpath": "bp_pricedetails_breakdown_price",
+        "isValue": true,
+        "isOptional": true
+      },
+      "hotelNameSelector": {
+        "ByXpath": ".//*[@id='hp_hotel_name']",
+        "ById": "#hp_hotel_name",
+        "ByClass": "",
+        "ByCssXpath": "hp_hotel_name",
+        "isValue": true,
+        "isOptional": false
+      },
+      "hotelStarsSelector": {
+        "ByXpath": ".//*[@class='invisible_spoken']",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".invisible_spoken",
+        "isValue": true,
+        "isOptional": true
+      },
+      "hotelAddressSelector": {
+        "ByXpath": ".//*[contains(@class,'hp_address_subtitle')]",
+        "ById": "",
+        "ByClass": ".hp_address_subtitle js-hp_address_subtitle jq_tooltip",
+        "ByCssXpath": "hp_address_subtitle",
+        "isValue": true,
+        "isOptional": false
+      },
+      "hotelSummarySelector": {
+        "ByXpath": "string(.//*[@id='summary'])",
+        "ById": "#summary",
+        "ByClass": "",
+        "ByCssXpath": "",
+        "isValue": false,
+        "isOptional": true
+      },
+      "hotelOccupancyDivSelector": {
+        "ByXpath": ".//*[contains(@class,'hprt-table-cell-occupancy')]",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".hprt-table-cell-occupancy",
+        "isValue": false,
+        "isOptional": false
+      },
+      "hotelRoomOccupancySelector": {
+        "ByXpath": ".//*[contains(@class,'invisible_spoken')]",
+        "ById": "",
+        "ByClass": ".invisible_spoken",
+        "ByCssXpath": "invisible_spoken",
+        "isValue": true,
+        "isOptional": false
+      },
+      "hotelPriceDivSelector": {
+        "ByXpath": ".//*[contains(@class,'hprt-table-cell-price ')]",
+        "ById": "",
+        "ByClass": "",
+        "ByCssXpath": "",
+        "isValue": true,
+        "isOptional": false
+      },
+      "hotelRoomStandardPriceSelector": {
+        "ByXpath": ".//*[contains(@class,'hprt-price-price-standard')]",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".hprt-price-price-standard",
+        "isValue": true,
+        "isOptional": true
+      },
+      "hotelRoomOriginalPriceSelector": {
+        "ByXpath": ".//*[contains(@class,'hp-blue-sans-rack-rate')]",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".hp-blue-sans-rack-rate",
+        "isValue": true,
+        "isOptional": true
+      },
+      "hotelRoomDiscountPriceSelector": {
+        "ByXpath": ".//*[contains(@class,'hprt-price-price-actual')]",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".hprt-price-price-actual",
+        "isValue": true,
+        "isOptional": true
+      },
+      "hotelRoomtypeDivSelector": {
+        "ByXpath": ".//*[contains(@class,'hprt-table-cell-roomtype')]",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".hprt-table-cell-roomtype",
+        "isValue": false,
+        "isOptional": false
+      },
+      "hotelBedroomTypeSelector": {
+        "ByXpath": ".//*[@class='hprt-roomtype-bed']",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".hprt-roomtype-bed",
+        "isValue": false,
+        "isOptional": false
+      },
+      "hotelBedtypeFixedSelector": {
+        "ByXpath": "string(.//*[@class='bedroom_bed_type'])",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".bedroom_bed_type",
+        "isValue": false,
+        "isOptional": true
+      },
+      "hotelBedtypeOptionsSelector": {
+        "ByXpath": "string(.//*[@class='rt-bed-type'])",
+        "isOptional": true,
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".rt-bed-type",
+        "isValue": false
+      },
+      "hotelRoomNameSelector": {
+        "ByXpath": ".//*[contains(@class,'hprt-roomtype-icon-link')]",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".hprt-roomtype-icon-link",
+        "isValue": true,
+        "isOptional": false
+      },
+      "hotelRoomConditionsDivSelector": {
+        "ByXpath": ".//*[contains(@class,'hprt-table-cell-conditions')]",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".hprt-table-cell-conditions",
+        "isValue": false,
+        "isOptional": false
+      },
+      "hotelRoomBoardTypeSelector": {
+        "ByXpath": "string(.//*[@class='hprt-green-condition jq_tooltip  rt_clean_up_options'])",
+        "ById": "",
+        "ByCssXpath": "li[class='hprt-green-condition jq_tooltip  rt_clean_up_options']",
+        "ByClass": ".hprt-green-condition jq_tooltip  rt_clean_up_options",
+        "isValue": false,
+        "isOptional": false
+      },
+      "hotelRoomCancellationSelector": {
+        "ByXpath": "string(.//*[@class='hprt-conditions__cancellation '])",
+        "ById": "",
+        "ByCssXpath": "hprt-conditions__cancellation ",
+        "ByClass": ".hprt-conditions__cancellation",
+        "isValue": false,
+        "isOptional": true
+      },
+      "hotelRoomPrepaymentSelector": {
+        "ByXpath": "string(.//*[@class='hprt-jq_tooltip hprt-checkmark-condition hprt-bold-condition hprt-blue-condition'])",
+        "ById": "",
+        "ByCssXpath": "jq_tooltip hprt-checkmark-condition hprt-bold-condition hprt-green-condition ",
+        "ByClass": ".hprt-jq_tooltip hprt-checkmark-condition hprt-bold-condition hprt-blue-condition",
+        "isValue": false,
+        "isOptional": false
+      },
+      "hotelLinksSelector": {
+        "isOptional": false,
+        "ById": "",
+        "ByCssXpath": "jq_tooltip hprt-checkmark-condition hprt-bold-condition hprt-green-condition ",
+        "ByClass": ".hprt-jq_tooltip hprt-checkmark-condition hprt-bold-condition hprt-blue-condition",
+        "isValue": false,
+        "ByXpath": ".//a[@class='hotel_name_link url']/@href"
+      },
+      "hotelRoomsDivSelector": {
+        "ByXpath": ".//*[@id='maxotelRoomArea']",
+        "ById": "",
+        "ByCssXpath": "maxotelRoomArea",
+        "ByClass": "#maxotelRoomArea",
+        "isValue": false,
+        "isOptional": false
+      },
+      "hotelRoomIdAttribute": {
+        "ByXpath": ".//@data-block-id",
+        "ById": "",
+        "ByClass": "",
+        "ByCssXpath": "data-block-id",
+        "isValue": false,
+        "isOptional": false
+      },
+      "hotelRoomsRowSelector": {
+        "isOptional": false,
+        "ById": "",
+        "ByClass": "",
+        "isValue": false,
+        "ByCssXpath": "tr[data-block-id]",
+        "ByXpath": ".//tr[@data-et-view]"
+      },
+      "hotelRoomSizeSelector": {
+        "ByXpath": ".//*[@class='js-room-size-unit-value']",
+        "ById": "",
+        "ByClass": ".js-room-size-unit-value",
+        "isValue": false,
+        "isValue": true,
+        "isOptional": true
+      },
+      "hotelReviewSelector": {
+        "ByXpath": "",
+        "ById": "",
+        "ByClass": ".review-score-widget__text",
+        "ByCssXpath": "review-score-widget__text",
+        "isValue": false,
+        "isOptional": false
+      },
+      "hotelReviewScoreSelector": {
+        "ByXpath": ".//*[@class='review-score-badge']",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".review-score-badge",
+        "isOptional": false,
+        "isValue": true
+      },
+      "hotelRoomSmokingPolicySelector": {
+        "ByXpath": ".//*[@class='hprt-smoking-policy-copy']",
+        "ById": "",
+        "ByCssXpath": "hprt-smoking-policy-copy ",
+        "ByClass": ".hprt-smoking-policy-copy",
+        "isValue": true,
+        "isOptional": true
+      },
+      "hotelRoomFacilitiesSelector": {
+        "ByXpath": ".//*[@class='hprt-facilities-block']",
+        "ById": "",
+        "ByCssXpath": "hprt-facilities-block",
+        "ByClass": ".hprt-facilities-block",
+        "isValue": false,
+        "isOptional": false
+      },
+      "hotelFacilitiesInner": {
+        "ByXpath": ".//*[contains(@class,'hprt-facilities-facility')]/span",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".hprt-facilities-facility",
+        "isValue": true,
+        "isOptional": true
+      },
+      "hotelOtherFacilitiesSelector": {
+        "ByXpath": "./*[@class='hprt-facilities-others']",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".hprt-facilities-others",
+        "isValue": false,
+        "isOptional": true
+      },
+      "hotelOtherFacilitiesInner": {
+        "ByXpath": ".//*[contains(@class,'hprt-facilities-facility')]",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".hprt-facilities-facility",
+        "isOptional": true,
+        "isValue": true
+      },
+      "hotelRoomStatusSelector": {
+        "ByXpath": ".//*[contains(@class,'jq_tooltip')]",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".jq_tooltip",
+        "isValue": true,
+        "isOptional": true
+      },
+      "hotelTaxinfoDivSelector": {
+        "ByXpath": ".//*[contains(@class,'hptr-taxinfo-block')]",
+        "ById": "",
+        "ByClass": ".hptr-taxinfo-block",
+        "ByCssXpath": "",
+        "isValue": false,
+        "isOptional": false
+      },
+      "hotelRoomTaxDetailsSelector": {
+        "isOptional": false,
+        "ByCssXpath": "hptr-taxinfo-details",
+        "ById": "",
+        "ByClass": "",
+        "ByXpath": ".//*[@class='hptr-taxinfo-details']",
+        "isValue": false
+      },
+      "hotelTaxDetailsInner": {
+        "ByXpath": ".//text()",
+        "ById": "",
+        "ByClass": "",
+        "ByCssXpath": "",
+        "isValue": false,
+        "isOptional": false
+      },
+      "roomCheckSelector": {
+        "ByXpath": ".//td",
+        "ById": "",
+        "ByClass": "",
+        "ByCssXpath": "",
+        "isValue": false,
+        "isOptional": false
+      },
+    "roomAvailabilitySelector": {
+        "ByXpath": ".//td[@colspan]",
+        "ById": "",
+        "ByClass": "",
+        "ByCssXpath": "",
+        "isValue": false,
+        "isOptional": false
+      },
+    "StarsDivSelector": {
+        "ByXpath": ".//*[@class='hp__hotel-title']",
+        "ById": "",
+        "ByClass": ".hp__hotel-title",
+        "ByCssXpath": "",
+        "isValue": false,
+        "isOptional": false
+      }
+    },
+    "CalendarScriptPath": "bookingCalendar.js",
+    "GlobalScriptPath": "bookingGlobalScript.js",
+    "inbounditemsCount": 0,
+    "outbounditemsCount": 2,
+    "ExtraInfo": null,
+    "BotTimeoutInSec": 1200
+  },
+  "CrawlParams": {
+    "url": "https://www.booking.com",
+    "depth": "1",
+    "couponCode": null,
+    "checkInDate": "2018/08/25",
+    "checkOutDate": "2018/08/26",
+    "adults": "2",
+    "children": "0",
+    "minimumLengthofStay": "2",
+    "cityCode": "-411756",
+    "Package": null,
+    "city": "Chaungtha",
+    "state": null,
+    "domain": null,
+    "country": "",
+    "propertyName": "Hill Garden Hotel",
+    "propertyID": "2037704",
+    "propertyChainCode": "/mm/hill-garden",
+    "type": "INC",
+    "currency": "USD",
+    "countryCode": "0",
+    "cityId": "47077,1243037"
+  },
+  "MetaData": {
+    "RequestSegmentId": 1,
+    "CustomerId": 35,
+    "UserId": 1552,
+    "RowKey": 7,
+    "RequestId": 0,
+    "ReportId": 36818,
+    "ReportType": 2,
+    "SiteId": 769,
+    "SubscriberId": 0,
+    "IsSameTimeShopping": false,
+    "RetryCount": 0,
+    "Status": 12,
+    "StatusText": "Queued",
+    "ReportTypeText": "Scheduled",
+    "SameTimeShoppingBatchId": "0",
+    "LastModifiedDateTimeUTC": "2018-06-08T10:06:46.683",
+    "ReportDeliveryTimeUTC": "0001-01-01T00:00:00",
+    "DateTimeStampIns": "0001-01-01T00:00:00",
+    "UniqueId": "83c6b6b0-3425-4fb4-8a8b-fe89fdf377b7"
+  },
+  "SystemSettings": {
+    "ProductId": 3,
+    "AzureStorageAccessKey": "IWuJO0UITxy5NTM5/dB+YhB4obTNufHQieZHHTVTREV2GO9OJedxwacwX5pZqzgV69Sxc6ZCjLZ5h2BLB4ACXA==",
+    "AzureStorageContainerName": null,
+    "AzureStorageAccount": "adevtestrsood7682",
+    "ApiEndPointUrl": "http://35.226.217.232/api/v1/SiteUrlInfo?productId=3",
+    "AzureWorkspaceId": "3d8efe25-90f9-4fda-ad10-e76088eadc35",
+    "AzureAuthenticationId": "FMxHpiRVeXvU1JbtSmk+JGC4qNVVybyzmFFS3V+w3BU6xQT/pKXIRGIqim+MZIEBRRUeohXnvuwUEMhV3v9C+g=="
+  },
+  "CacheFilePath": "https://adevtestrsood7682.blob.core.windows.net/cachepages"
+}

@@ -6,11 +6,6 @@
       <change beforePath="$PROJECT_DIR$/../eggs/testBot/1534946261.egg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../logs/testBot/test_spider/87b009caa61311e88b4494de80e5a786.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../response.html" beforeDir="false" afterPath="$PROJECT_DIR$/../response.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/testBot/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/testBot/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/testBot/spiders/TestSpider.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/testBot/spiders/TestSpider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testBot/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/testBot/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testBot/spiders/TestSpider.py" beforeDir="false" afterPath="$PROJECT_DIR$/testBot/spiders/TestSpider.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +17,7 @@
     <session id="-368839438">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.5" value="1" />
