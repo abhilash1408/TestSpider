@@ -34,12 +34,19 @@ class TestbotPipeline(object):
             item["status"] = FAILURE_STATUS_TRUE
         else:
             item["status"] = FAILURE_STATUS_FALSE
+        data_json = json.dumps(item)
         print(item)
+        headers = {'Content-Type': 'application/json'}
+        try:
+            requests.post(url=self.url, data=data_json, headers=headers)
+        except Exception as e:
+            print(str(e))
 
     def process_item(self, item, spider):
-        self.items.append(item["data"])
-        self.error_type = item["error_type"]
-        self.error_description = item["error_description"]
-        self.not_scraped_items += item["not_scraped_items"]
-        self.not_scraped_items_optional += item["not_scraped_items_optional"]
+        if "Rooms" not in item:
+            self.items.append(item["data"])
+            self.error_type = item["error_type"]
+            self.error_description = item["error_description"]
+            self.not_scraped_items += item["not_scraped_items"]
+            self.not_scraped_items_optional += item["not_scraped_items_optional"]
         return item

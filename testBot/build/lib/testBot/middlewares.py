@@ -5,8 +5,9 @@
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
+import random
 from scrapy import signals
-
+from testBot.constants import SCRAPY_FAILURE_PROXY
 
 class TestbotSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
@@ -54,6 +55,25 @@ class TestbotSpiderMiddleware(object):
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
+
+
+class CustomProxyMiddleware(object):
+    # overwrite process request
+    def process_request(self, request, spider):
+        try:
+            config = spider.config
+            proxy = random.choice(config["Proxies"])
+            spider.hotel["ProxyIP"] = proxy["IPAddress"]
+            spider.hotel["ProxyCategory"] = proxy["ProxyCategory"]
+            spider.hotel["ProxyCountryID"] = proxy["CountryId"]
+            proxy_user_pass = proxy["UserId"] + ":"+proxy["Password"]+"@"
+            request.meta['proxy'] = "http://"+proxy_user_pass+proxy["IPAddress"]
+            request.headers["User-Agent"] = config["BotInfo"]["UserAgent"]
+            spider.proxy = True
+        except Exception as e:
+            spider.proxy = False
+            spider.error_type = SCRAPY_FAILURE_PROXY
+            spider.error_description = str(e)
 
 
 class TestbotDownloaderMiddleware(object):

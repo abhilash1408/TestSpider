@@ -52,10 +52,10 @@ DEFAULT_REQUEST_HEADERS = {
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'testBot.middlewares.TestbotDownloaderMiddleware': 543,
-#}
-
+DOWNLOADER_MIDDLEWARES = {
+    'testBot.middlewares.CustomProxyMiddleware': 350,
+    # 'testBot.middlewares.TestbotDownloaderMiddleware': 543,
+}
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
 #EXTENSIONS = {
