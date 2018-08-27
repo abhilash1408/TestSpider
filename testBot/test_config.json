@@ -88,14 +88,25 @@
         "SavePath": "HotelDescription",
         "filter": false
       },
+      "hotelReviewScoreDivSelector": {
+        "ByXpath": ".//*[@id='reviewFloater']",
+        "ById": "#reviewFloater",
+        "ByCssXpath": "",
+        "ByClass": "",
+        "isOptional": false,
+        "isValue": false,
+        "parent": null,
+        "SavePath": "",
+        "filter": false
+      },
       "hotelReviewScoreSelector": {
-        "ByXpath": ".//*[@class='review-score-badge']",
+        "ByXpath": ".//a//*[@class='review-score-badge']",
         "ById": "",
         "ByCssXpath": "",
         "ByClass": ".review-score-badge",
         "isOptional": false,
         "isValue": true,
-        "parent": null,
+        "parent": "hotelReviewScoreDivSelector",
         "SavePath": "HotelReviewScore",
         "filter": false
       },
@@ -207,7 +218,17 @@
         "isOptional": true,
         "parent": "hotelRoomtypeDivSelector",
         "SavePath": "SmokingPolicy",
-        "filter": false
+        "filter": true
+      },
+      "hotelRoomSizeSelector": {
+        "ByXpath": ".//*[@class='js-room-size-unit-value']",
+        "ById": "",
+        "ByClass": ".js-room-size-unit-value",
+        "isValue": true,
+        "isOptional": true,
+        "parent": "hotelRoomtypeDivSelector",
+        "SavePath": "Size",
+        "filter": true
       },
       "hotelRoomFacilitiesDivSelector": {
         "ByXpath": ".//*[@class='hprt-facilities-block']",
@@ -218,7 +239,7 @@
         "isOptional": false,
         "parent": "hotelRoomtypeDivSelector",
         "SavePath": "",
-        "filter": false
+        "filter": true
       },
       "hotelFacilitiesSelector": {
         "ByXpath": ".//*[contains(@class,'hprt-facilities-facility')]/span",
@@ -228,8 +249,8 @@
         "isValue": true,
         "isOptional": true,
         "parent": "hotelRoomFacilitiesDivSelector",
-        "SavePath": "Facilities",
-        "filter": false
+        "SavePath": "Facilities;add",
+        "filter": true
       },
       "hotelOtherFacilitiesDivSelector": {
         "ByXpath": "./*[@class='hprt-facilities-others']",
@@ -240,7 +261,7 @@
         "isOptional": true,
         "parent": "hotelRoomFacilitiesDivSelector",
         "SavePath": "",
-        "filter": false
+        "filter": true
       },
       "hotelOtherFacilitiesSelector": {
         "ByXpath": ".//*[contains(@class,'hprt-facilities-facility')]",
@@ -251,7 +272,40 @@
         "isValue": true,
         "parent": "hotelOtherFacilitiesDivSelector",
         "SavePath": "Facilities;add",
-        "filter": false
+        "filter": true
+      },
+      "hotelBedroomTypeDivSelector": {
+        "ByXpath": ".//*[@class='hprt-roomtype-bed']",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".hprt-roomtype-bed",
+        "isValue": false,
+        "isOptional": false,
+        "parent": "hotelRoomsRowSelector",
+        "SavePath": "",
+        "filter": true
+      },
+      "hotelBedtypeFixedSelector": {
+        "ByXpath": "string(.//*[@class='bedroom_bed_type'])",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".bedroom_bed_type",
+        "isValue": false,
+        "isOptional": true,
+        "parent": "hotelBedroomTypeDivSelector",
+        "SavePath": "BedroomType",
+        "filter": true
+      },
+      "hotelBedtypeOptionsSelector": {
+        "ByXpath": "string(.//*[@class='rt-bed-type'])",
+        "isOptional": true,
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".rt-bed-type",
+        "isValue": false,
+        "parent": "hotelBedroomTypeDivSelector",
+        "SavePath": "BedroomType",
+        "filter": true
       },
       "hotelOccupancyDivSelector": {
         "ByXpath": ".//*[contains(@class,'hprt-table-cell-occupancy')]",
@@ -308,6 +362,17 @@
         "SavePath": "CancellationPolicy",
         "filter": false
       },
+      "hotelRoomPrepaymentSelector": {
+        "ByXpath": "string(.//*[@class='jq_tooltip hprt-checkmark-condition hprt-bold-condition hprt-blue-condition '])",
+        "ById": "",
+        "ByCssXpath": "jq_tooltip hprt-checkmark-condition hprt-bold-condition hprt-green-condition ",
+        "ByClass": ".hprt-jq_tooltip hprt-checkmark-condition hprt-bold-condition hprt-blue-condition",
+        "isValue": false,
+        "isOptional": false,
+        "parent": "hotelRoomConditionsDivSelector",
+        "SavePath": "Prepayment",
+        "filter": false
+      },
       "hotelPriceDivSelector": {
         "ByXpath": ".//*[contains(@class,'hprt-table-cell-price ')]",
         "ById": "",
@@ -317,7 +382,7 @@
         "isOptional": false,
         "parent": "hotelRoomsRowSelector",
         "SavePath": "",
-        "filter": false
+        "filter": true
       },
       "hotelRoomStandardPriceSelector": {
         "ByXpath": ".//*[contains(@class,'hprt-price-price-standard')]",
@@ -328,7 +393,7 @@
         "isOptional": true,
         "parent": "hotelPriceDivSelector",
         "SavePath": "",
-        "filter": false
+        "filter": true
       },
       "hotelRoomOriginalPriceSelector": {
         "ByXpath": ".//*[contains(@class,'hp-blue-sans-rack-rate')]",
@@ -339,7 +404,7 @@
         "isOptional": true,
         "parent": "hotelPriceDivSelector",
         "SavePath": "",
-        "filter": false
+        "filter": true
       },
       "hotelRoomDiscountPriceSelector": {
         "ByXpath": ".//*[contains(@class,'hprt-price-price-actual')]",
@@ -350,6 +415,83 @@
         "isOptional": true,
         "parent": "hotelPriceDivSelector",
         "SavePath": "",
+        "filter": true
+      },
+      "hotelTaxinfoDivSelector": {
+        "ByXpath": ".//*[contains(@class,'hptr-taxinfo-block')]",
+        "ById": "",
+        "ByClass": ".hptr-taxinfo-block",
+        "ByCssXpath": "",
+        "isValue": false,
+        "isOptional": false,
+        "parent": "hotelRoomsRowSelector",
+        "SavePath": "",
+        "filter": false
+      },
+      "hotelRoomTaxDetailsDivSelector": {
+        "isOptional": false,
+        "ByCssXpath": "hptr-taxinfo-details",
+        "ById": "",
+        "ByClass": "",
+        "ByXpath": ".//*[@class='hptr-taxinfo-details']",
+        "isValue": false,
+        "parent": "hotelTaxinfoDivSelector",
+        "SavePath": "",
+        "filter": false
+      },
+      "hotelTaxDetailsSelector": {
+        "ByXpath": ".//text()",
+        "ById": "",
+        "ByClass": "",
+        "ByCssXpath": "",
+        "isValue": false,
+        "isOptional": false,
+        "parent": "hotelRoomTaxDetailsDivSelector",
+        "SavePath": "tax",
+        "filter": false
+      },
+      "hotelDepthPriceDivSelector": {
+        "ByXpath": ".//*[@data-animate-price-group-name='bp_user_total_price']",
+        "ById": "",
+        "ByClass": "",
+        "ByCssXpath": "",
+        "isValue": true,
+        "isOptional": false,
+        "parent": null,
+        "SavePath": "",
+        "filter": false
+      },
+      "hotelDepthChargeDivSelector": {
+        "ByXpath": ".//*[@class='bp_pricedetails_breakdown_included']",
+        "ById": "",
+        "ByClass": ".bp_pricedetails_breakdown_included",
+        "ByCssXpath": "bp_pricedetails_breakdown_included",
+        "isValue": false,
+        "isOptional": true,
+        "parent": null,
+        "SavePath": "",
+        "filter": false
+      },
+      "hotelDepthChargeDetailsSelector": {
+        "ByXpath": ".//*[@class='bp_pricedetails_breakdown_charge']",
+        "ById": "",
+        "ByClass": ".bp_pricedetails_breakdown_charge",
+        "ByCssXpath": "bp_pricedetails_breakdown_charge",
+        "isValue": true,
+        "isOptional": true,
+        "parent": "hotelDepthChargeDivSelector",
+        "SavePath": "",
+        "filter": false
+      },
+      "hotelDepthChargePriceSelector": {
+        "ByXpath": ".//*[@class='bp_pricedetails_breakdown_price']",
+        "ById": "",
+        "ByClass": ".bp_pricedetails_breakdown_price",
+        "ByCssXpath": "bp_pricedetails_breakdown_price",
+        "isValue": true,
+        "isOptional": true,
+        "parent": "hotelDepthChargeDivSelector",
+        "SavePath": "",
         "filter": false
       }
     }
@@ -358,8 +500,8 @@
     "url": "https://www.booking.com",
     "depth": "1",
     "couponCode": null,
-    "checkInDate": "2018/08/25",
-    "checkOutDate": "2018/08/26",
+    "checkInDate": "2018/08/30",
+    "checkOutDate": "2018/08/31",
     "adults": "2",
     "children": "0",
     "minimumLengthofStay": "2",
@@ -399,8 +541,8 @@
     "UniqueId": "83c6b6b0-3425-4fb4-8a8b-fe89fdf377b7"
   },
     "ApiEndpoints": {
-    "ClosureServiceUrl": "http://127.0.01:8000/api/crawlstat/"
-  },
+      "ClosureServiceUrl": "http://127.0.01:8000/api/crawlstat/"
+    },
   "Proxies":[
     {
       "IPAddress": "104.129.37.20:60000",
