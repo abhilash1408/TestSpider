@@ -1,0 +1,58 @@
+{
+  "step1":{
+    "url": "https://booking.com/",
+    "htmlTags": {},
+    "action": "redirect",
+    "actionSelector": {},
+    "dataToBePassed": [],
+    "urlGenerator": "{BotInfo#BaseUrl}/hotel{CrawlParams#propertyChainCode}.html?checkin={CrawlParams#checkInDate};checkout={CrawlParams#checkOutDate};dest_type=city;dist=0;dest_id={CrawlParams#cityCode};group_adults={CrawlParams#adults};group_children={CrawlParams#children};req_adults={CrawlParams#adults};req_children={CrawlParams#children};selected_currency={CrawlParams#currency};changed_currency=1;"
+      },
+  "step2": {
+    "url": "",
+    "htmlTags": {
+      "hotelDetailsMainDivSelector":{
+        "ByXpath": "//*[@id='right']",
+        "ById": "#right",
+        "ByClass": ".rlt-right",
+        "ByCssXpath": "#right",
+        "isValue": false,
+        "isOptional": true,
+        "parent": null
+      },
+      "hotelInfoDivSelector": {
+        "ByXpath": "//*[@id='wrap-hotelpage-top']",
+        "ById": "#wrap-hotelpage-top",
+        "ByClass": ".wrap-hotelpage-top",
+        "ByCssXpath": "#wrap-hotelpage-top",
+        "isValue": false,
+        "isOptional": false,
+        "parent": "hotelDetailsMainDivSelector"
+      },
+      "hotelNameSelector": {
+        "ByXpath": ".//*[@id='hp_hotel_name']",
+        "ById": "#hp_hotel_name",
+        "ByClass": ".hp__hotel-name",
+        "ByCssXpath": "#hp_hotel_name",
+        "isValue": true,
+        "isOptional": false,
+        "parent": "hotelInfoDivSelector"
+      },
+      "hotelStarsSelector": {
+        "ByXpath": ".//*[@class='invisible_spoken']",
+        "ById": "",
+        "ByCssXpath": "",
+        "ByClass": ".invisible_spoken",
+        "isValue": true,
+        "isOptional": true,
+        "parent": "hotelInfoDivSelector"
+      }
+    },
+    "action": "click",
+    "actionSelector": {
+      "ById": "#btn_click",
+      "ByClass": "some-class",
+      "ByXpath": ""
+    },
+    "dataToBePassed": ["selector1", "selector2"]
+  }
+}
