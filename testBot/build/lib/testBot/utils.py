@@ -145,22 +145,22 @@ class Utils(object):
         except Exception as e:
             raise e
 
-    def save(self, d, save_path, value):
+    def save(self, target, save_path, value):
         try:
             if len(save_path) == 0:
                 return value
             else:
                 if save_path[0] == "add":
                     if isinstance(value, str):
-                        d.append(value)
+                        target.append(value)
                     else:
-                        d += value
+                        target += value
                 else:
-                    if save_path[0] not in d:
-                        d[save_path[0]] = self.save({}, save_path[1:], value)
+                    if save_path[0] not in target:
+                        target[save_path[0]] = self.save({}, save_path[1:], value)
                     else:
-                        d[save_path[0]] = self.save(d[save_path[0]], save_path[1:], value)
-                return d
+                        target[save_path[0]] = self.save(target[save_path[0]], save_path[1:], value)
+                return target
         except Exception as e:
             raise e
 
@@ -175,7 +175,7 @@ class Utils(object):
                         output = output.extract_first().strip("\n").strip()
             else:
                 output = selector.xpath(self.config["BotInfo"]["HtmlTags"][tag]["ByXpath"])
-                if "string(" in self.config["BotInfo"]["HtmlTags"][tag]["ByXpath"] or\
+                if "string(" in self.config["BotInfo"]["HtmlTags"][tag]["ByXpath"] and\
                         "Div" not in tag:
                     if output is not None and len(output) != 0:
                         if tag == "hotelTaxDetailsSelector":
